@@ -33,20 +33,25 @@ describe('Funcionalidade: Login', () =>
         cy.get('.woocommerce-error').should('contain' , 'Erro: A senha fornecida para o e-mail levy@eu.com está incorreta. Perdeu a senha?')
     });
 
-    it.only(' Deve fazer login com sucesso Usando massa de dados', () => {
+    it(' Deve fazer login com sucesso Usando massa de dados', () => {
         cy.get('#username').type(perfil.usuario)
         cy.get('#password').type(perfil.senha)
         cy.get('.woocommerce-form > .button').click()
-        cy.get('.woocommerce-error').should('contain' , 'Olá, levy (não é levy? Sair)')
+        cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain' , 'Olá, levy (não é levy? Sair)')
     });
 
     it(' Deve fazer login com sucesso Usando fixture', () => {
         cy.fixture('perfil').then( dados => {
-            cy.get('#username').type(dados.usuario)
-            cy.get('#password').type(dados.senha)
+            cy.get('#username').type(dados.usuario, {log: false })
+            cy.get('#password').type(dados.senha, {log: false })
             cy.get('.woocommerce-form > .button').click()
             cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain' , 'Olá, levy (não é levy? Sair)')
         });
 
     });
+
+    it.only('deve fazer o login com sucesso - usando comandos customizados', () => {
+      cy.login('fabio.teste@teste.com.br', 'teste@123')
+      cy.get('.woocommerce-MyAccount-content > :nth-child(2)')
+      });
 });

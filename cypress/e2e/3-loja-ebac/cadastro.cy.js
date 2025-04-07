@@ -22,4 +22,9 @@ beforeEach(() => {
         cy.get('.woocommerce-Button').click()
         cy.get('.woocommerce-message').should('contain', 'Detalhes da conta modificados com sucesso');
     });
+
+    it.only('deve completar cadastro com sucesso - usando comando customizado', () => {
+       cy.preCadastro(faker.internet.email(), '123', faker.person.firstName(), faker.person.lastName() )
+       cy.get('.woocommerce-message').should('contain', 'Detalhes da conta modificados com sucesso');
+    });
 });

@@ -1,27 +1,32 @@
-import produtosPage from '../support/pages/ProdutosPage';
+class ProdutosPage {
 
-describe('Funcionalidade de Produtos', () => {
-  beforeEach(() => {
-    produtosPage.visitarUrl();
-  });
+  visitarUrl() 
+  {
+      cy.visit('produtos')
+  }
 
-  it('Deve ser possível buscar por um produto', () => {
-    const nomeDoProduto = 'Aether Gym Pant';
-    produtosPage.buscarProduto(nomeDoProduto);
-  });
+  buscarProdutos()
+  {
+    cy.get('[name="s"]').eq(1).type(nomeProduto)
+    cy.get('cy.get('.search > .tbay-search-form > .form-ajax-search > .form-group > .input-group > .button-group > .button-search')').eq(1).click()
+  }//.button-search
 
-  it('Deve ser possível navegar para a página de um produto', () => {
-    const nomeDoProduto = 'Aether Gym Pant';
-    produtosPage.visitarProduto(nomeDoProduto);
-  });
+  buscarProdutosLista()
+  {
+    cy.get('.products > . row')
+    .contains(nomeProduto)
+    .click()
+  }
 
-  it('Deve ser possível adicionar um produto ao carrinho com atributos específicos', () => {
-    const nomeDoProduto = 'Aether Gym Pant';
-    const tamanho = 'G';
-    const cor = 'Azul';
-    const quantidade = '2';
+  visitarProduto()
+  {
 
-    produtosPage.selecionarProdutoNaLista(nomeDoProduto);
-    produtosPage.adicionarProdutoAoCarrinho(tamanho, cor, quantidade);
-  });
-});
+  }
+
+  addProdutoCarrinho()
+  {
+
+  }
+}
+
+export default new ProdutosPage()

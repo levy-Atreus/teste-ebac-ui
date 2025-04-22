@@ -1,20 +1,20 @@
 [
     {
-        "nomeProduto": "Aether Gym Pant",
-        "tamanho": "XS",
-        "cor": "Blue",
-        "quantidade": 1
+      "nomeProduto": "Aero Daily Fitness Tee",
+      "tamanho": "M",
+      "cor": "black",
+      "quantidade": 1
     },
     {
-        "nomeProduto": "Aether Gym Pant",
-        "tamanho": "XS",
-        "cor": "Blue",
-        "quantidade": 1
+      "nomeProduto": "Aero Daily Fitness Tee",
+      "tamanho": "M",
+      "cor": "Brown",
+      "quantidade": 1
     },
     {
-        "nomeProduto": "Aether Gym Pant",
-        "tamanho": "XS",
-        "cor": "Blue",
-        "quantidade": 1
+      "nomeProduto": "Aero Daily Fitness Tee",
+      "tamanho": "M",
+      "cor": "yellow",
+      "quantidade": 1
     }
-]
+  ]

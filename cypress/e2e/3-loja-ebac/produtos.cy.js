@@ -35,7 +35,7 @@ describe('Funcionalidade: Produtos', () => {
     // funcionando
   });
 
-  it.only('Deve adicionar produto ao carrinho com massa de dados', () => {
+  it('Deve adicionar produto ao carrinho com massa de dados', () => {
     cy.fixture('produtos').then(dados => {
 
     produtosPage.buscarProduto(dados[1].nomeProduto)
@@ -45,6 +45,7 @@ describe('Funcionalidade: Produtos', () => {
       dados[1].quantidade)
 
     cy.get('.product_title').should('contain', dados[1].nomeProduto)
+    // funcionando
    });
   });
 });

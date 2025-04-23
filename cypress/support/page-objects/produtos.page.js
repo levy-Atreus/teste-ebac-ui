@@ -29,14 +29,7 @@ class ProdutosPage {
       cy.get('.single_add_to_cart_button').click
     }
   
-    selecionarProdutoPorNome(nomeProduto) {
-      cy.wait(2000);
-      cy.get('.product-loop__item') // Se este for o seletor para cada item da lista
-        .find('a.woocommerce-LoopProduct-link') // Se esta for a classe do link do título
-        .contains(nomeProduto, { matchCase: true })
-        .should('be.visible')
-        .click();
-    }
+   
   }
   
   export default new ProdutosPage();

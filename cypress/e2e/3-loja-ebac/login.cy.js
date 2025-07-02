@@ -9,10 +9,10 @@ describe('Funcionalidade: Login', () =>
     });
     
     afterEach(() => {
-        //cy.screenshot() !!!!!!!!!!!!!!
+        //cy.screenshot()
     });
 
-    it.only('Deve fazer login com sucesso', () => {
+    it('Deve fazer login com sucesso', () => {
         cy.get('#username').type('levy@eu.com')
         cy.get('#password').type('123')
         cy.get('.woocommerce-form > .button').click()

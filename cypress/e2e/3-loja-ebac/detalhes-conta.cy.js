@@ -11,8 +11,7 @@ describe('funcionalidade: detalhes da conta', () => {
     });
     
     it('deve completar detalhes da conta sucesso', () => {
-        cy.detalhesConta('Levy', 'Atreus', '0')
+        cy.detalhesConta('Levy', 'Atreus', 'zer0')
         cy.get('.woocommerce-message').should('contain', 'Detalhes da conta modificados com sucesso.')
     });
-
 });

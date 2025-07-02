@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npx cypress run --browser chrome",
-    "projectId": "bfbdm5"
+    "cy.dash": "npx cypress run --record --key b362214b-a187-4c3b-8a0a-a598ca333eef"
   },
   "repository": {
     "type": "git",

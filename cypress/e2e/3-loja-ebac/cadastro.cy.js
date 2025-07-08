@@ -1,5 +1,6 @@
 /// <reference types="cypress"/>
 import { faker } from '@faker-js/faker';
+//npx cypress open (para abrir o cypress)
 
 describe('funcionalidade: cadastro', () => {
     

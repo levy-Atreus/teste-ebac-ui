@@ -1,6 +1,7 @@
 import produtosPage from "../../support/page-objects/produtos.page";
 
 describe('Funcionalidade: Produtos', () => {
+//npx cypress open (para abrir o cypress)
 
   beforeEach(() => {
     cy.visit('produtos');

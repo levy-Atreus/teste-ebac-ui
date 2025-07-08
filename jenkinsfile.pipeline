@@ -21,11 +21,11 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Iniciando a execução dos testes Cypress/NPM...'
-                bat '''
-                    set NO_COLOR=1
-                    npm test
-                '''
-                echo 'Execução dos testes concluída.'
+                bat 'set NO_COLOR=1'
+        // Mude esta linha:
+        // bat 'npm test' // Ou especificamente 'npx cypress run'
+        // Para:
+                bat 'npx cypress run' // Sem especificar --browser chrome
             }
         }
     }

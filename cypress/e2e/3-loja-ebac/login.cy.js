@@ -1,5 +1,6 @@
 /// <reference types="cypress"/>
 const perfil = require('../../fixtures/perfil.json')
+//npx cypress open (para abrir o cypress)
 
 describe('Funcionalidade: Login', () => 
 {

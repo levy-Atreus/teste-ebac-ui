@@ -1,4 +1,5 @@
 /// <reference types="cypress"/>
+//npx cypress open (para abrir o cypress)
 
 describe('funcionalidade: detalhes da conta', () => {
 
